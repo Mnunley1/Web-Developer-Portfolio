@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --resursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@swup/js-plugin": "^1.0.4",
+    "animsition": "^4.0.2",
+    "gsap": "^3.0.1",
+    "node-sass": "^4.13.0",
+    "swup": "^2.0.8"
+  }
+}

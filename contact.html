@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malcolm Nunley</title>
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/animsition/dist/css/animsition.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <a class="link link-top animsition-link" href="/index.html">Home</a>
+      <a class="link link-left animsition-link" href="/about.html">Bio</a>
+      <a class="link link-right animsition-link" href="/portfolio.html"
+        >Portfolio</a
+      >
+      <a class="link link-bottom animsition-link" href="/contact.html"
+        >Contact</a
+      >
+    </nav>
+    <main class="animsition">
+      <section>
+        <div class="home-content">
+          <h1>Contact page</h1>
+          <p>beautiful full transisiton</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- animsition.js -->
+    <script src="node_modules/animsition/dist/js/animsition.min.js"></script>
+    <script src="dist/js/index.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".animsition").animsition({
+          inClass: "fade-in-up-sm",
+          outClass: "fade-out",
+          inDuration: 1500,
+          outDuration: 800,
+          linkElement: ".animsition-link",
+          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+          loading: false,
+          loadingParentElement: "body", //animsition wrapper element
+          loadingClass: "animsition-loading",
+          loadingInner: "", // e.g '<img src="loading.svg" />'
+          timeout: false,
+          timeoutCountdown: 5000,
+          onLoadEvent: true,
+          browser: ["animation-duration", "-webkit-animation-duration"],
+          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+          overlay: false,
+          overlayClass: "animsition-overlay-slide",
+          overlayParentElement: "body",
+          transition: function(url) {
+            window.location.href = url;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
