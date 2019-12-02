@@ -11,10 +11,16 @@
       type="text/css"
       href="node_modules/animsition/dist/css/animsition.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <nav>
-      <a class="link link-top animsition-link " href="/index.html">Home</a>
+      <a class="link link-top animsition-link" href="/index.html">Home</a>
       <a class="link link-left animsition-link" href="/about.html">Bio</a>
       <a class="link link-right animsition-link" href="/portfolio.html"
         >Portfolio</a
@@ -24,19 +30,182 @@
       >
     </nav>
     <main class="animsition">
-      <section>
-        <div class="home-content">
-          <h1>Portfolio page</h1>
-          <p>beautiful full transisiton</p>
+      <div class="container-fluid">
+        <div class="portfolio-content">
+          <div class="button-group filters-button-group">
+            <button class="button is-checked" data-filter="*">All</button>
+            <button class="button" data-filter=".apps">Apps</button>
+            <button class="button" data-filter=".website">Websites</button>
+          </div>
+
+          <section
+            id="grid-container"
+            class="transitions-enabled fluid masonry js-masonry grid"
+          >
+            <article class="website">
+              <div class="item">
+                <img src="thumbnails/candy_museum.png" class="img-responsive" />
+                <div class="icons-p">
+                  <a
+                    href="thumbnails/candy_museum.png"
+                    title="View image"
+                    class="openButton"
+                    data-fancybox
+                    data-caption="A responsive landing page created using mostly HTML, CSS and Bootstrap"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Mnunley1/Museum-Of-Candy"
+                    target="_blank"
+                    class="projectLink"
+                  >
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </article>
+            <article class="apps">
+              <div class="item">
+                <img src="thumbnails/retro_tetris.png" class="img-responsive" />
+                <div class="icons-p">
+                  <a
+                    href="thumbnails/retro_tetris.png"
+                    title="View image"
+                    class="openButton"
+                    data-fancybox
+                    data-caption="A simple recreation of the timeless game Tetris, primarily focusing on JavaScript and CSS"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Mnunley1/Retro-Tetris"
+                    target="_blank"
+                    class="projectLink"
+                  >
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </article>
+            <article class="apps">
+              <div class="item">
+                <img src="thumbnails/color_game.png" class="img-responsive" />
+                <div class="icons-p">
+                  <a
+                    href="thumbnails/color_game.png"
+                    title="View image"
+                    class="openButton"
+                    data-fancybox
+                    data-caption="A fun color matching game created with HTML, CSS, BootStrap and JavaScript"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Mnunley1/Color-Game"
+                    target="_blank"
+                    class="projectLink"
+                  >
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </article>
+            <article class="website">
+              <div class="item">
+                <img src="thumbnails/photo_grid.png" class="img-responsive" />
+                <div class="icons-p">
+                  <a
+                    href="thumbnails/photo_grid.png"
+                    title="View image"
+                    class="openButton"
+                    data-fancybox
+                    data-caption="Photo grid picture gallery using HTML and CSS and an emphasis on flexbox"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Mnunley1/Photo-Grid-Static-Site"
+                    target="_blank"
+                    class="projectLink"
+                  >
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </article>
+            <article class="website">
+              <div class="item">
+                <img
+                  src="thumbnails/purrfect_match.png"
+                  class="img-responsive"
+                />
+                <div class="icons-p">
+                  <a
+                    href="thumbnails/purrfect_match.png"
+                    title="View image"
+                    class="openButton"
+                    data-fancybox
+                    data-caption="Static landing page for a website using HTML and CSS"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Mnunley1/Purrfect-Match"
+                    target="_blank"
+                    class="projectLink"
+                  >
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </article>
+            <article class="apps">
+              <div class="item">
+                <img
+                  src="thumbnails/real_estate_app.png"
+                  class="img-responsive"
+                />
+                <div class="icons-p">
+                  <a
+                    href="thumbnails/real_estate_app.png"
+                    title="View image"
+                    class="openButton"
+                    data-fancybox
+                    data-caption="Fully deployed real estate application clone using Python, Django, Ubuntu and much more"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Mnunley1/MXN-Real-Estate"
+                    target="_blank"
+                    class="projectLink"
+                  >
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </article>
+          </section>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- animsition.js -->
     <script src="node_modules/animsition/dist/js/animsition.min.js"></script>
-    <script src="dist/js/index.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script>
       $(document).ready(function() {
         $(".animsition").animsition({
@@ -63,6 +232,32 @@
             window.location.href = url;
           }
         });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $(".filter-button").click(function() {
+          var value = $(this).attr("data-filter");
+
+          if (value == "all") {
+            //$('.filter').removeClass('hidden');
+            $(".filter").show("1000");
+          } else {
+            //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+            //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter")
+              .not("." + value)
+              .hide("3000");
+            $(".filter")
+              .filter("." + value)
+              .show("3000");
+          }
+        });
+
+        if ($(".filter-button").removeClass("active")) {
+          $(this).removeClass("active");
+        }
+        $(this).addClass("active");
       });
     </script>
   </body>

@@ -11,6 +11,12 @@
       type="text/css"
       href="node_modules/animsition/dist/css/animsition.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <nav>
@@ -24,19 +30,96 @@
       >
     </nav>
     <main class="animsition">
-      <section>
+      <div class="container-fluid">
         <div class="home-content">
-          <h1>Contact page</h1>
-          <p>beautiful full transisiton</p>
+          <div class="row justify-content-center">
+            <div class="col-md-6 " id="form_container">
+              <h2>Contact Me</h2>
+              <p>
+                Please send your message below. We will get back to you at the
+                earliest!
+              </p>
+              <form role="form" method="post" id="reused_form">
+                <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <label for="message"> Message:</label>
+                    <textarea
+                      class="form-control"
+                      type="textarea"
+                      id="message"
+                      name="message"
+                      maxlength="6000"
+                      rows="7"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label for="name"> Your Name:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      required
+                    />
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label for="email"> Email:</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <button
+                      type="submit"
+                      class="btn btn-lg btn-default pull-right"
+                    >
+                      Send →
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div
+                id="success_message"
+                style="width:100%; height:100%; display:none; "
+              >
+                <h3>Posted your message successfully!</h3>
+              </div>
+              <div
+                id="error_message"
+                style="width:100%; height:100%; display:none; "
+              >
+                <h3>Error</h3>
+                Sorry there was an error sending your form.
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- animsition.js -->
     <script src="node_modules/animsition/dist/js/animsition.min.js"></script>
-    <script src="dist/js/index.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"
+    ></script>
+    <script src="dist/js/validation.js"></script>
     <script>
       $(document).ready(function() {
         $(".animsition").animsition({
